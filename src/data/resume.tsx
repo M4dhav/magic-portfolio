@@ -2,15 +2,15 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Dillion Verma",
-  initials: "DV",
+  name: "Madhav Gupta",
+  initials: "MG",
   url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  location: "Delhi, India",
+  locationLink: "https://www.google.com/maps/place/delhi",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Cross Platform Mobile App Developer and Open Source Enthusiast pioneering new ways to build apps using cutting-edge technologies.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I am Madhav Gupta, a final year Computer Science Engineering Student from India. I love building Mobile Applications that solve real world problems using innovative technologies. I work as a *Full Stack Developer* specialising in delivering quality software, with experience developing *Mobile Applications, Websites, Desktop Applications, and even Embedded Systems*. I am also an avid *Open Source Contributor*, and love giving back to the Community in any way I can.",
   avatarUrl: "/me.png",
   skills: [
     "React",
