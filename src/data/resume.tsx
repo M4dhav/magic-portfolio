@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import { FaAws, FaDartLang, FaFlutter, FaReact } from "react-icons/fa6";
-import { SiAmazonsqs, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
+import { SiAmazonsqs, SiAppwrite, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 
 
@@ -59,7 +59,10 @@ export const DATA = {
       name: "Firebase",
       icon: <SiFirebase className="size-3" />,
     },
-
+    {
+      name: "Appwrite"
+      , icon: <SiAppwrite className="size-3" />,
+    },
     {
       name: "MongoDB",
       icon: <SiMongodb className="size-3" />,
@@ -92,10 +95,10 @@ export const DATA = {
       name: "TensorFlow",
       icon: <SiTensorflow className="size-3" />,
     },
-    {
-      name: "Keras",
-      icon: <SiKeras className="size-3" />,
-    },
+    // {
+    //   name: "Keras",
+    //   icon: <SiKeras className="size-3" />,
+    // },
 
   ],
   navbar: [
@@ -242,32 +245,37 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "meshtastic flutter",
+      href: "https://pub.dev/packages/meshtastic_flutter",
+      dates: "July 2025 - August 2025",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        `A  comprehensive Flutter package that enables direct communication with Meshtastic devices over Bluetooth Low Energy
+(BLE), implementing the full [Meshtastic](https://meshtastic.org/) protocol. Provides advanced mesh networking capability with
+simple strongly typed APIs.`,
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Dart",
+        "Flutter",
+        "Bluetooth Low Energy (BLE)",
+        "Protobuf",
+        "Meshtastic Protocol",
+
       ],
       links: [
         {
-          type: "Website",
-          href: "https://chatcollect.com",
+          type: "pub.dev",
+          href: "https://pub.dev/packages/meshtastic_flutter",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/M4dhav/meshtastic_flutter",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image: "/meshtasticflutter.jpg",
+      // video:
+      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
       title: "Magic UI",
