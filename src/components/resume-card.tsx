@@ -5,9 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon, GlobeIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Markdown from "react-markdown";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -17,7 +18,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string | readonly string[];
 }
 export const ResumeCard = ({
   logoUrl,
@@ -31,7 +32,7 @@ export const ResumeCard = ({
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
@@ -39,11 +40,7 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
+    <div className="block cursor-pointer" onClick={handleClick}>
       <Card className="flex">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
@@ -100,11 +97,37 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {Array.isArray(description) ? (
+                <ul className="ml-4 list-disc space-y-1">
+                  {description.map((item, index) => (
+                    <li key={index}>
+                      <Markdown className="prose-sm dark:prose-invert max-w-none [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0">
+                        {item}
+                      </Markdown>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <Markdown className="prose-sm dark:prose-invert max-w-none whitespace-pre-line [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0">
+                  {description as string}
+                </Markdown>
+              )}
+              {href && href !== "#" && (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center gap-1 mt-3 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <GlobeIcon className="size-3" />
+                  <span>Website</span>
+                </a>
+              )}
             </motion.div>
           )}
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };

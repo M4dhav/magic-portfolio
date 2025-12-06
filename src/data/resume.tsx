@@ -1,55 +1,128 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { FaAws, FaDartLang, FaFlutter, FaReact } from "react-icons/fa6";
+import { SiAmazonsqs, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+
+
+
 
 export const DATA = {
-  name: "Dillion Verma",
-  initials: "DV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  name: "Madhav Gupta",
+  initials: "MG",
+  url: "https://dillion.io", //TBD
+  location: "Delhi, India",
+  locationLink: "https://www.google.com/maps/place/delhi",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Cross Platform Mobile App Developer and Open Source Enthusiast pioneering new ways to build apps using cutting-edge technologies.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
+    "I am Madhav Gupta, a final year Computer Science Engineering Student from India. I love building Mobile Applications that solve real world problems using innovative technologies. I work as a **Full Stack Developer** specialising in delivering quality software, with experience developing **Mobile Applications, Websites, Desktop Applications, and even Embedded Systems**. I am also an avid **Open Source Contributor**, and love giving back to the Community in any way I can.",
+  avatarUrl: "/me.jpg",
   skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
-    "C++",
+    {
+      name: "Next.js",
+      icon: <Icons.nextjs className="size-3" />,
+    },
+    {
+      name: "React, React Native",
+      icon: <Icons.react className="size-3" />,
+    },
+    {
+      name: "Typescript",
+      icon: <Icons.typescript className="size-3" />,
+    },
+    {
+      name: "Python",
+      icon: <SiPython className="size-3" />,
+    },
+    {
+      name: "Flutter",
+      icon: <FaFlutter className="size-3" />,
+    },
+    {
+      name: "Dart",
+      icon: <FaDartLang className="size-3" />,
+    },
+    {
+      name: "Kotlin",
+      icon: <SiKotlin className="size-3" />,
+    },
+    {
+      name: "Swift",
+      icon: <SiSwift className="size-3" />,
+    },
+    {
+      name: "Express.js",
+      icon: <SiExpress className="size-3" />,
+    },
+    {
+      name: "Firebase",
+      icon: <SiFirebase className="size-3" />,
+    },
+
+    {
+      name: "MongoDB",
+      icon: <SiMongodb className="size-3" />,
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql className="size-3" />,
+    },
+    {
+      name: "Azure",
+      icon: <VscAzure className="size-3" />,
+    },
+    {
+      name: "AWS",
+      icon: <FaAws className="size-3" />,
+    },
+    {
+      name: "GCP",
+      icon: <SiGooglecloud className="size-3" />,
+    },
+    {
+      name: "Docker",
+      icon: <SiDocker className="size-3" />,
+    },
+    {
+      name: "Git",
+      icon: <SiGit className="size-3" />,
+    },
+    {
+      name: "TensorFlow",
+      icon: <SiTensorflow className="size-3" />,
+    },
+    {
+      name: "Keras",
+      icon: <SiKeras className="size-3" />,
+    },
+
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "madhav.gupta7674@gmail.com",
+    tel: "+917658008316",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/M4dhav",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/M4dhav",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "https://x.com/M4dhav1",
         icon: Icons.x,
 
         navbar: true,
@@ -58,7 +131,7 @@ export const DATA = {
         name: "Youtube",
         url: "https://dub.sh/dillion-youtube",
         icon: Icons.youtube,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
@@ -71,112 +144,101 @@ export const DATA = {
   },
 
   work: [
+
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "PowerClub Global",
+      badges: [],
+      href: "https://powerclubglobal.com/",
+      location: "Remote (Miami, Florida)",
+      title: "Junior Developer",
+      logoUrl: "/pcg.png",
+      start: "February 2024",
+      end: "Present",
+      description:
+        [
+          "**Built YachtMaster App** : Led full-stack development and deployment of yacht chartering application on Apple App Store, implementing advanced Flutter features including Custom Painter, Isolates, and state management solutions (Bloc/Provider)",
+          "**Built Pythia RAG Chatbot:** Architected ML-powered internal chatbot using RAG architecture on Azure, improving company information accessibility by 75% and handling 500+ daily queries.",
+          "**Developed AlphaGo** : Cross-platform Web3 social networking dApp using Bitcoin DevKit and Esplora RPC, incentivizing crypto conference attendance and later enabling Offline On-Chain Transanctions.",
+          "**Architected and developed Alpha Protocol** : Revolutionary decentralized communication protocol using LoRA mesh networks enabling offline Bitcoin transactions and off-grid communication reducing dependency on traditional infrastructure by 100% and demonstrating expertise in cutting-edge blockchain technology"
+        ]
+    },
+    {
+      company: "One Stop Tech Solutions",
+      href: "https://osts.tech/",
+      badges: [],
+      location: "Remote (Bangalore, India)",
+      title: "Contract Full Stack Developer",
+      logoUrl: "/osts.png",
+      start: "January 2024",
+      end: "Present",
+      description:
+        [
+          "**Built IoT water tank management system**: End-to-end solution connecting IoT devices with mobile applications for real-time monitoring and control, reducing manual monitoring costs by 60%",
+          "**Developed firmware using ESP-IDF**: Industry-standard embedded development for IoT hardware integration with cost-effective scalability",
+          "**Created client-side mobile application**: Flutter-based cross-platform app with Firebase backend and AWS S3 integration for data storage and analytics with over 99% uptime and streamlined client onboarding and support"
+        ]
+    },
+    {
+      company: "Google Summer of Code",
+      href: "https://summerofcode.withgoogle.com/archive/2025/projects/txbphR3y",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
-      description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+      title: "Open Source Contributor",
+      logoUrl: "/gsoc-pin.png",
+      start: "May 2025",
+      end: "Oct 2025",
+      description: [
+        "**Contributed to Resonate App** with 50+ implemented features and quality improvements, deployed to Google Play Store",
+        "**Established CI/CD pipeline**: Set up automated build compilation and deployment to Google Play Internal Testing, reducing deployment time by 75%",
+        "**Engineered comprehensive test suite**: Created automated software tests covering 50% of app functionalities using widget and unit testing frameworks, decreasing production bugs by 60%",
+        "**Enhanced accessibility features**: Added internationalization support and On Device Transcription functionality improving user inclusivity and experience by 70%",
+        "**Optimized search performance**: Migrated from basic database queries to Meilisearch AI-powered search engine, boosting search speed by 60%",
+      ],
     },
     {
-      company: "Shopify",
+      company: "TechGropse",
+      href: "https://www.techgropse.com/",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      location: "Hybrid (Noida, India)",
+      title: "Node.js Intern",
+      logoUrl: "/techgropse.png",
+      start: "August 2023",
+      end: "February 2024",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        [
+          "**Developed scalable backends**: Built secure, production-ready APIs using Node.js and MongoDB for multiple client applications serving 10,000+ concurrent users with 99.8% uptime",
+          "**Implemented CI/CD pipelines**: Established automated deployment workflows reducing deployment time by 70% and ensuring zero-downtime releases",
+          "**Collaborated in enterprise environment**: Worked with 5+ cross-functional teams and 15+ developers on large codebases, learning Git workflows and code review processes"
+        ]
     },
-    {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
-      badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
-      description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    },
+
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
+      school: "Bennett University",
+      href: "https://www.bennett.edu.in/",
+      degree: "Bachelor's of Technology in Computer Science Engineering | 8.42 CGPA",
+      logoUrl: "/bennett-univ.png",
+      start: "2022",
+      end: "2026",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
+      school: "Guru Nanak Public School",
+      href: "http://gnpschandigarh.in/",
+      degree: "Senior Secondary (CBSE) | XII - 84.8%",
+      logoUrl: "/gnps.png",
+      start: "2020",
+      end: "2022",
     },
     {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
+      school: "The Gurukul",
+      href: "https://www.thegurukul.guru/",
+      degree: "Senior Secondary (CBSE) | X - 93.4%",
+      logoUrl: "/gurukul.jpg",
+      start: "2018",
+      end: "2020",
     },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
-    },
+
   ],
   projects: [
     {
