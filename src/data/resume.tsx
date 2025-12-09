@@ -171,7 +171,7 @@ export const DATA = {
       href: "https://osts.tech/",
       badges: [],
       location: "Remote (Bangalore, India)",
-      title: "Contract Full Stack Developer",
+      title: "Consultant Full Stack Developer",
       logoUrl: "/osts.png",
       start: "January 2024",
       end: "Present",
