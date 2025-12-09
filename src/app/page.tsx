@@ -89,7 +89,6 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
-                href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
@@ -132,7 +131,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
+                  websites to complex mobile applications. Here are a few of my
                   favorites.
                 </p>
               </div>

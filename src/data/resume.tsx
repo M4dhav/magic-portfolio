@@ -1,6 +1,7 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import { FaAws, FaDartLang, FaFlutter, FaReact } from "react-icons/fa6";
+import { FaAws, FaDartLang, FaFlutter, FaGooglePay, FaGooglePlay, FaReact } from "react-icons/fa6";
+import { IoLogoAppleAppstore } from "react-icons/io5";
 import { SiAmazonsqs, SiAppwrite, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 
@@ -219,7 +220,6 @@ export const DATA = {
   education: [
     {
       school: "Bennett University",
-      href: "https://www.bennett.edu.in/",
       degree: "Bachelor's of Technology in Computer Science Engineering | 8.42 CGPA",
       logoUrl: "/bennett-univ.png",
       start: "2022",
@@ -227,7 +227,6 @@ export const DATA = {
     },
     {
       school: "Guru Nanak Public School",
-      href: "http://gnpschandigarh.in/",
       degree: "Senior Secondary (CBSE) | XII - 84.8%",
       logoUrl: "/gnps.png",
       start: "2020",
@@ -235,7 +234,6 @@ export const DATA = {
     },
     {
       school: "The Gurukul",
-      href: "https://www.thegurukul.guru/",
       degree: "Senior Secondary (CBSE) | X - 93.4%",
       logoUrl: "/gurukul.jpg",
       start: "2018",
@@ -244,6 +242,69 @@ export const DATA = {
 
   ],
   projects: [
+    {
+      title: "Resonate",
+      href: "https://play.google.com/store/apps/details?id=com.resonate.resonate&hl=en",
+      dates: "April 2023 - September 2023",
+      active: true,
+      description:
+        "An Open Source Social Voice Platform designed to foster authentic audio conversations and communities. As part of my [GSoC '25 Project](https://summerofcode.withgoogle.com/archive/2025/projects/txbphR3y), I added multiple developer and user oriented features to the application, like internationalization, Automated tests, AI Enabled semantic search, On-device Audio Transcription, and much more.",
+      technologies: [
+        "Flutter",
+        "Appwrite",
+        "LiveKit",
+        "Docker",
+        "OpenAI Whisper",
+        "GetX",
+        "Firebase Messaging",
+        "Meilisearch",
+      ],
+      links: [
+        {
+          type: "Google Play Store",
+          href: "https://play.google.com/store/apps/details?id=com.resonate.resonate&hl=en",
+          icon: <FaGooglePlay className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AOSSIE-Org/Resonate",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/resonate.png",
+      video: "",
+    },
+
+    {
+      title: "YachtMaster App",
+      href: "https://apps.apple.com/in/app/yachtmaster-app/id6449384419",
+      dates: "June 2023 - Present",
+      active: true,
+      description:
+        "Easy to use cross platform application for chartering yachts around the world. Allows users to host, find and book charters and other experiences, and supports a wide variety of payment methods. I worked on this application in a major capacity as part of my role at PowerClub Global.",
+      technologies: [
+        "Flutter",
+        "Firebase",
+        "Stripe",
+        "GetX",
+        "Provider",
+        "Bloc",
+      ],
+      links: [
+        {
+          type: "Apple App Store",
+          href: "https://apps.apple.com/in/app/yachtmaster-app/id6449384419",
+          icon: <IoLogoAppleAppstore className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Powerclub-Global/YachtMaster-App.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/yma.mp4",
+    },
     {
       title: "meshtastic flutter",
       href: "https://pub.dev/packages/meshtastic_flutter",
@@ -277,71 +338,7 @@ simple strongly typed APIs.`,
       video:
         "",
     },
-    {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
+
     {
       title: "Automatic Chat",
       href: "https://automatic.chat",
