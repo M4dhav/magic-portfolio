@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import { FaAws, FaDartLang, FaFlutter, FaGooglePay, FaGooglePlay, FaReact } from "react-icons/fa6";
+import { FaAws, FaDartLang, FaFlutter, FaGooglePay, FaGooglePlay, FaLinkedin, FaReact } from "react-icons/fa6";
 import { IoLogoAppleAppstore } from "react-icons/io5";
 import { SiAmazonsqs, SiAppwrite, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
@@ -369,7 +369,72 @@ simple strongly typed APIs.`,
         "/hydrosense.mp4",
     },
   ],
-  hackathons: [
+  hackathons: [],
+  positionsOfResponsibility: [
+    {
+      organization: "FOSS United Chapter Bennett University",
+      position: "Founder and Senior Mentor",
+      logoUrl: "/foss.jpg",
+      start: "September 2024",
+      end: "Present",
+      description: [
+        "- Co-founded and currently serve as a Senior Mentor, guiding the core team for the 2025-26 tenure.",
+        "- Selected and empowered club leads to drive impactful open-source initiatives within the student community.",
+        "- Fostered collaboration and innovation, enhancing student engagement and participation in tech projects.",
+        "- Developed leadership and mentorship skills while promoting a culture of open-source contributions.",
+        "---",
+        "Founder and Co-Lead",
+        "- Spearheaded the establishment of the FOSS Community at Bennett University, organizing impactful events to enhance the coding culture.",
+        "- Collaborated with team members to develop innovative strategies for community engagement and growth.",
+        "- Implemented initiatives to promote open-source software development and foster a collaborative learning environment.",
+      ],
+      links: [
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/company/104854044/",
+          icon: <FaLinkedin className="size-3" />,
+        },
+      ]
+    },
+    {
+      organization: "Artificial Intelligence Society Bennett University",
+      position: "Senior Mentor",
+      logoUrl: "/ais.jpg",
+      start: "August 2024",
+      end: "Present",
+      description: [
+        "- Mentored the AIS Core for the academic year 2025-26, providing guidance on technical and operational challenges.",
+        "- Facilitated workshops and training sessions to enhance team skills and knowledge in artificial intelligence.",
+        "- Collaborated with diverse teams to foster a culture of innovation and continuous improvement within the society.",
+        "---",
+        "Reinforcement Team Lead",
+        "- Mentor Juniors in ML Projects",
+        "- Develop Cutting Edge Reinforcement Learning Projects",
+        "- Research in the Reinforcement Learning field"
+      ],
+      links: [
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/company/78124600/",
+          icon: <FaLinkedin className="size-3" />,
+        },
+      ]
+    },
+    {
+      organization: "Mobilon",
+      position: "Technical Team Co-Lead",
+      logoUrl: "/mobilon.jpg",
+      start: "September 2023",
+      end: "July 2024",
+      description: "As Technical Co-Head, led the development initiatives of the club, spearheading the development of multiple functional apps, including a Ride-Share Platform, a Locator service, and an AI Companion. Learnt and taught Juniors how to work with big teams, and use of services like GitHub and Firebase. Guided the juniors on their journey to learning Mobile Development with Flutter. Co-Hosted multiple events throughout the year, including a 5 Day Fullstack Workshop which included sessions on AI/ML, Backend Development and Mobile Development, and acted as Speaker for the session on Mobile Development. Also organised an RTC to facilitate sharing of Entrepreneurial ideas and helped develop the best ideas into real world applications.",
+      links: [
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/company/98649932/",
+          icon: <FaLinkedin className="size-3" />,
+        },
+      ]
+    },
 
   ],
 } as const;

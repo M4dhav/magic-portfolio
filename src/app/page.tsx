@@ -159,47 +159,44 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section id="positions">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
+                  Positions of Responsibility
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  Leadership & Community
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I believe in the power of collaboration and teamwork. So I like to keep myself busy while working in different communities and projects. Here are some of the positions I have held.
                 </p>
               </div>
             </div>
           </BlurFade>
-          {/* <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
+              {DATA.positionsOfResponsibility.map((position, id) => (
                 <BlurFade
-                  key={project.title + project.dates}
+                  key={position.organization}
                   delay={BLUR_FADE_DELAY * 15 + id * 0.05}
                 >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
+                  <PositionCard
+                    organization={position.organization}
+                    position={position.position}
+                    description={position.description}
+                    start={position.start}
+                    end={position.end}
+                    logoUrl={position.logoUrl}
+                    href={position.href}
+                    links={position.links}
                   />
                 </BlurFade>
               ))}
             </ul>
-          </BlurFade> */}
+          </BlurFade>
         </div>
       </section>
       <section id="contact">
@@ -213,15 +210,21 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Just shoot me a dm with a direct question on{" "}
                 <Link
                   href={DATA.contact.social.X.url}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  Twitter
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                or{" "}
+                <Link
+                  href={DATA.contact.social.LinkedIn.url}
+                  className="text-blue-500 hover:underline"
+                >
+                  LinkedIn
+                </Link>{" "}
+                and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
