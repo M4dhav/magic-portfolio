@@ -190,8 +190,8 @@ export default function Page() {
                     start={position.start}
                     end={position.end}
                     logoUrl={position.logoUrl}
-                    href={position.href}
-                    links={position.links}
+                    href={"href" in position ? (position.href as string) : undefined}
+                    links={"links" in position ? (position.links as readonly { icon?: React.ReactNode; type: string; href: string; }[]) : undefined}
                   />
                 </BlurFade>
               ))}

@@ -70,9 +70,9 @@ export function PositionCard({
         {links && links.length > 0 && (
           <div className="mt-3 flex flex-row flex-wrap items-start gap-3">
             {links.map((link, idx) => (
-              <a 
-                href={link.href} 
-                key={idx} 
+              <a
+                href={link.href}
+                key={idx}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
