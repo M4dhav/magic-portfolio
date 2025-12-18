@@ -127,10 +127,10 @@ export default function Page() {
                   Projects I&apos;ve contributed to
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  Check out my latest contributions
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
+                  I&apos;ve contributed to a variety of projects, from simple
                   websites to complex mobile applications. Here are a few of my
                   favorites.
                 </p>
