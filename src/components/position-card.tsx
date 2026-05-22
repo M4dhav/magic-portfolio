@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { GlobeIcon } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import Markdown from "react-markdown";
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
   start: string;
   end: string;
   logoUrl?: string;
+  logoBackground?: string;
   href?: string;
   links?: readonly {
     icon?: React.ReactNode;
@@ -26,14 +28,21 @@ export function PositionCard({
   start,
   end,
   logoUrl,
+  logoBackground,
   href,
   links,
 }: Props) {
   return (
     <li className="relative ml-10 py-4">
-      <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-        <Avatar className="border size-12 m-auto">
-          <AvatarImage src={logoUrl} alt={organization} className="object-contain" />
+      <div 
+        className="absolute -left-16 top-2 flex items-center justify-center rounded-full"
+        style={{ backgroundColor: logoBackground || "white" }}
+      >
+        <Avatar 
+          className="border size-12 m-auto"
+          style={{ backgroundColor: logoBackground || "white" }}
+        >
+          <AvatarImage src={logoUrl} alt={organization} className="object-contain p-1" />
           <AvatarFallback>{organization[0]}</AvatarFallback>
         </Avatar>
       </div>
@@ -46,7 +55,7 @@ export function PositionCard({
         ) : (
           <h2 className="font-semibold leading-none">{organization}</h2>
         )}
-        <p className="text-sm text-muted-foreground">{position}</p>
+        <p className="text-sm text-foreground">{position}</p>
         {description && (
           <>
             {Array.isArray(description) ? (
@@ -54,32 +63,36 @@ export function PositionCard({
                 {description.map((item, index) => (
                   <Markdown
                     key={index}
-                    className="prose-sm dark:prose-invert max-w-none text-sm text-muted-foreground [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal"
+                    className="prose-sm dark:prose-invert max-w-none text-sm text-muted-foreground [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal [&_strong]:font-bold [&_strong]:text-black dark:[&_strong]:text-white [&_em]:not-italic [&_em]:text-black dark:[&_em]:text-white"
                   >
                     {item}
                   </Markdown>
                 ))}
               </div>
             ) : (
-              <Markdown className="prose-sm dark:prose-invert text-sm text-muted-foreground whitespace-pre-line max-w-none [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal">
+              <Markdown className="prose-sm dark:prose-invert text-sm text-muted-foreground whitespace-pre-line max-w-none [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal [&_strong]:font-bold [&_strong]:text-black dark:[&_strong]:text-white [&_em]:not-italic [&_em]:text-black dark:[&_em]:text-white">
                 {description as string}
               </Markdown>
             )}
           </>
         )}
         {links && links.length > 0 && (
-          <div className="mt-3 flex flex-row flex-wrap items-start gap-3">
+          <div className="mt-3 flex flex-row flex-wrap items-center gap-3">
             {links.map((link, idx) => (
-              <a
-                href={link.href}
-                key={idx}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.icon}
-                <span>{link.type}</span>
-              </a>
+              <React.Fragment key={idx}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.icon}
+                  <span>{link.type}</span>
+                </a>
+                {idx < links.length - 1 && (
+                  <span className="text-muted-foreground/50 text-xs">|</span>
+                )}
+              </React.Fragment>
             ))}
           </div>
         )}

@@ -75,13 +75,14 @@ export default function Page() {
               <ResumeCard
                 key={work.company}
                 logoUrl={work.logoUrl}
+                logoBackground={"logoBackground" in work ? (work.logoBackground as string) : undefined}
                 altText={work.company}
                 title={work.company}
                 subtitle={work.title}
-                href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
+                links={"links" in work ? (work.links as any) : undefined}
               />
             </BlurFade>
           ))}
@@ -100,6 +101,7 @@ export default function Page() {
               <ResumeCard
                 key={education.school}
                 logoUrl={education.logoUrl}
+                logoBackground={"logoBackground" in education ? (education.logoBackground as string) : undefined}
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
@@ -134,13 +136,13 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Projects I&apos;ve contributed to
+                  My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest contributions
+                  Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve contributed to a variety of projects, from simple
+                  I&apos;ve worked on a variety of projects, from simple
                   websites to complex mobile applications. Here are a few of my
                   favorites.
                 </p>
@@ -200,6 +202,7 @@ export default function Page() {
                     start={position.start}
                     end={position.end}
                     logoUrl={position.logoUrl}
+                    logoBackground={"logoBackground" in position ? (position.logoBackground as string) : undefined}
                     href={"href" in position ? (position.href as string) : undefined}
                     links={"links" in position ? (position.links as readonly { icon?: React.ReactNode; type: string; href: string; }[]) : undefined}
                   />

@@ -15,25 +15,31 @@ interface ResumeCardProps {
   altText: string;
   title: string;
   subtitle?: string;
-  href?: string;
   badges?: readonly string[];
   period: string;
   description?: string | readonly string[];
+  logoBackground?: string;
+  links?: readonly {
+    icon?: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
 }
 export const ResumeCard = ({
   logoUrl,
   altText,
   title,
   subtitle,
-  href,
   badges,
   period,
   description,
+  logoBackground,
+  links,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (description) {
+    if (description || (links && links.length > 0)) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
     }
@@ -43,11 +49,14 @@ export const ResumeCard = ({
     <div className="block cursor-pointer" onClick={handleClick}>
       <Card className="flex">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar 
+            className="border size-12 m-auto" 
+            style={{ backgroundColor: logoBackground || "white" }}
+          >
             <AvatarImage
               src={logoUrl}
               alt={altText}
-              className="object-contain"
+              className="object-contain p-1"
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
@@ -70,7 +79,7 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                {(description || (href && href !== "#")) && (
+                {(description || (links && links.length > 0)) && (
                   <ChevronRightIcon
                     className={cn(
                       "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
@@ -83,9 +92,9 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs sm:text-sm">{subtitle}</div>}
           </CardHeader>
-          {description && (
+          {(description || (links && links.length > 0)) && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{
@@ -99,32 +108,44 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {Array.isArray(description) ? (
-                <ul className="ml-4 list-disc space-y-1">
-                  {description.map((item, index) => (
-                    <li key={index}>
-                      <Markdown className="prose-sm dark:prose-invert max-w-none [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0">
+              {description && (
+                Array.isArray(description) ? (
+                  <div className="space-y-1">
+                    {description.map((item, index) => (
+                      <Markdown 
+                        key={index}
+                        className="prose-sm dark:prose-invert max-w-none text-sm text-muted-foreground [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal [&_strong]:font-bold [&_strong]:text-black dark:[&_strong]:text-white [&_em]:not-italic [&_em]:text-black dark:[&_em]:text-white"
+                      >
                         {item}
                       </Markdown>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <Markdown className="prose-sm dark:prose-invert max-w-none whitespace-pre-line [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0">
-                  {description as string}
-                </Markdown>
+                    ))}
+                  </div>
+                ) : (
+                  <Markdown className="prose-sm dark:prose-invert text-sm text-muted-foreground whitespace-pre-line max-w-none [&>*]:text-xs [&>*]:sm:text-sm [&>*]:my-0 [&>ul]:ml-4 [&>ul]:list-disc [&>ol]:ml-4 [&>ol]:list-decimal [&_strong]:font-bold [&_strong]:text-black dark:[&_strong]:text-white [&_em]:not-italic [&_em]:text-black dark:[&_em]:text-white">
+                    {description as string}
+                  </Markdown>
+                )
               )}
-              {href && href !== "#" && (
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="inline-flex items-center gap-1 mt-3 text-xs text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <GlobeIcon className="size-3" />
-                  <span>Website</span>
-                </a>
+              {links && links.length > 0 && (
+                <div className="mt-3 flex flex-row flex-wrap items-center gap-3">
+                  {links.map((link, idx) => (
+                    <React.Fragment key={idx}>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.icon}
+                        <span>{link.type}</span>
+                      </a>
+                      {idx < links.length - 1 && (
+                        <span className="text-muted-foreground/50 text-xs">|</span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
               )}
             </motion.div>
           )}

@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import { FaAws, FaDartLang, FaFlutter, FaGooglePay, FaGooglePlay, FaLinkedin, FaReact } from "react-icons/fa6";
+import { FaApple, FaAws, FaDartLang, FaFlutter, FaGlobe, FaGoogle, FaGooglePay, FaGooglePlay, FaGoogleScholar, FaLinkedin, FaReact, FaWebAwesome } from "react-icons/fa6";
 import { IoLogoAppleAppstore } from "react-icons/io5";
 import { SiAmazonsqs, SiAppwrite, SiDocker, SiExpress, SiFirebase, SiGit, SiGooglecloud, SiGraphql, SiKeras, SiKotlin, SiMongodb, SiMysql, SiPython, SiSwift, SiTensorflow } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
@@ -17,10 +17,9 @@ export const DATA = {
   location: "Delhi, India",
   locationLink: "https://www.google.com/maps/place/delhi",
   description:
-    "Cross Platform Mobile App Developer and Open Source Enthusiast pioneering new ways to build apps using cutting-edge technologies.",
+    "Product Engineer and Open Source Contributor building scalable full-stack systems across mobile, web, cloud, AI, and embedded ecosystems.",
   summary:
-    "I am Madhav Gupta, a final year Computer Science Engineering Student from India. I love building Mobile Applications that solve real world problems using innovative technologies. I work as a **Full Stack Developer** specialising in delivering quality software, with experience developing **Mobile Applications, Websites, Desktop Applications, and even Embedded Systems**. I am also an avid **Open Source Contributor**, and love giving back to the Community in any way I can.",
-  avatarUrl: "/me.jpg",
+    "I am Madhav Gupta, a Product Engineer and Open Source Contributor passionate about building technology that solves real-world problems at scale. My work spans Full-Stack Product Development across **Mobile** Applications, **Web** platforms, **Backend** systems, **AI-powered workflows**, **Distributed Infrastructure**, and **Embedded Systems.** I enjoy working across the entire product lifecycle — from architecture and system design to deployment and optimization — with a strong focus on developer experience, performance, and usability. Alongside engineering products, I actively contribute to **open-source communities** and **mentor contributors** across diverse technology stacks.", avatarUrl: "/me.jpg",
   skills: [
     {
       name: "Next.js",
@@ -154,35 +153,59 @@ export const DATA = {
     {
       company: "PowerClub Global",
       badges: [],
-      href: "https://powerclubglobal.com/",
       location: "Remote (Miami, Florida)",
-      title: "Junior Developer",
-      logoUrl: "/pcg.png",
+      title: "Senior Engineer",
+      logoUrl: "/pcg-t.png",
+      logoBackground: "black",
       start: "February 2024",
       end: "Present",
-      description:
-        [
-          "**Built YachtMaster App** : Led full-stack development and deployment of yacht chartering application on Apple App Store, implementing advanced Flutter features including Custom Painter, Isolates, and state management solutions (Bloc/Provider)",
-          "**Built Pythia RAG Chatbot:** Architected ML-powered internal chatbot using RAG architecture on Azure, improving company information accessibility by 75% and handling 500+ daily queries.",
-          "**Developed AlphaGo** : Cross-platform Web3 social networking dApp using Bitcoin DevKit and Esplora RPC, incentivizing crypto conference attendance and later enabling Offline On-Chain Transanctions.",
-          "**Architected and developed Alpha Protocol** : Revolutionary decentralized communication protocol using LoRA mesh networks enabling offline Bitcoin transactions and off-grid communication reducing dependency on traditional infrastructure by 100% and demonstrating expertise in cutting-edge blockchain technology"
-        ]
+      description: [
+        "- Contributed as a core engineer to Orcha, an *AI-native product management platform* built with React, TSX, Rust, and multi-agent AI systems, enabling *autonomous agents* to execute workflows including software development, market research, media generation, meeting transcription, and intelligent task orchestration within collaborative Kanban environments.",
+        "- *Promoted to Senior Engineer* in Jan 2026 after a large period of impactful contributions across the product stack, demonstrating leadership in scalable architecture design, cross-functional collaboration, and mentorship within a fast-paced startup environment.",
+        "---",
+        "*Junior Developer*",
+        "- Led end-to-end development and deployment of YachtMaster, a production-grade *yacht chartering platform* released on the Apple App Store, by architecting scalable Flutter systems, performance-optimized rendering pipelines, and modular application workflows.",
+        "- Architected Pythia, an enterprise *Retrieval-Augmented Generation (RAG) chatbot* on *Azure*, improving internal knowledge accessibility by 75% and supporting 500+ daily organizational queries through contextual retrieval and LLM-powered workflows.",
+        "- Built AlphaGo, a cross-platform *Web3 social networking platform* integrating Bitcoin DevKit and Esplora RPC, enabling *blockchain-native social interactions*, *crypto event engagement systems*, and *offline-capable on-chain transaction* workflows.",
+        "- Engineered Alpha Protocol, a *decentralized LoRa mesh communication system* enabling *off-grid messaging* and *offline Bitcoin transaction* relays without reliance on traditional internet infrastructure.",
+        "- Worked across *mobile, backend, AI, infrastructure, and distributed systems engineering*, contributing to *scalable architecture design, developer tooling, CI/CD automation, and rapid product iteration* within a remote startup environment."
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://powerclubglobal.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "YachtMaster App",
+          href: "https://apps.apple.com/us/app/yachtmaster-app/id6449384419",
+          icon: <FaApple className="size-3" />, // Or any icon you like
+        },
+
+      ]
     },
     {
       company: "One Stop Tech Solutions",
-      href: "https://osts.tech/",
+
       badges: [],
       location: "Remote (Bangalore, India)",
-      title: "Consultant Full Stack Developer",
+      title: "Consultant Product Engineer",
       logoUrl: "/osts.png",
       start: "January 2024",
       end: "Present",
-      description:
-        [
-          "**Built IoT water tank management system**: End-to-end solution connecting IoT devices with mobile applications for real-time monitoring and control, reducing manual monitoring costs by 60%",
-          "**Developed firmware using ESP-IDF**: Industry-standard embedded development for IoT hardware integration with cost-effective scalability",
-          "**Created client-side mobile application**: Flutter-based cross-platform app with Firebase backend and AWS S3 integration for data storage and analytics with over 99% uptime and streamlined client onboarding and support"
-        ]
+      description: [
+        "- Built an end-to-end *IoT water tank management platform* integrating embedded devices, cloud infrastructure, and cross-platform applications for *real-time monitoring, automation, and operational analytics*, reducing manual monitoring costs by 60%.",
+        "- Developed production-grade firmware using ESP-IDF and C++ for scalable IoT hardware deployments, enabling reliable device communication, telemetry collection, and low-cost infrastructure expansion.",
+        "- Engineered a cross-platform client application using *Flutter*, *Firebase*, and *AWS S3* with 99% uptime, enabling real-time device management, analytics visualization, onboarding workflows, and remote operational support.",
+        "- Worked across *embedded systems, backend services, cloud infrastructure, and frontend application layers* to deliver *fully integrated IoT solutions* for production environments."
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://ostsol.in/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ]
     },
     {
       company: "Google Summer of Code",
@@ -194,35 +217,60 @@ export const DATA = {
       start: "May 2025",
       end: "October 2025",
       description: [
-        "**Contributed to Resonate App** with 50+ implemented features and quality improvements, deployed to Google Play Store",
-        "**Established CI/CD pipeline**: Set up automated build compilation and deployment to Google Play Internal Testing, reducing deployment time by 75%",
-        "**Engineered comprehensive test suite**: Created automated software tests covering 50% of app functionalities using widget and unit testing frameworks, decreasing production bugs by 60%",
-        "**Enhanced accessibility features**: Added internationalization support and On Device Transcription functionality improving user inclusivity and experience by 70%",
-        "**Optimized search performance**: Migrated from basic database queries to Meilisearch AI-powered search engine, boosting search speed by 60%",
+        "- Contributed to *Resonate*, an open-source social voice platform, by delivering *50+ features, platform improvements, and developer tooling enhancements* across mobile architecture, UX, and infrastructure systems.",
+        "- Engineered automated *CI/CD pipelines* using *GitHub Actions* and Google Play Internal Testing workflows, reducing deployment turnaround time by 75% and streamlining release management.",
+        "- Built a comprehensive automated testing framework with *widget and unit tests* covering critical application workflows, reducing production regressions and significantly improving release stability.",
+        "- Improved platform accessibility and global usability by implementing *internationalization (i18n)* and *on-device speech transcription* capabilities for real-time voice interactions.",
+        "- Optimized application search architecture by migrating from conventional database querying to *Meilisearch-powered indexing and retrieval systems*, improving search performance and scalability by 60%.",
+        "- Collaborated within a distributed open-source engineering environment involving *code reviews*, *feature planning*, *issue triaging*, and *iterative product development* alongside global contributors and maintainers."
       ],
+      links: [
+        {
+          type: "Project Details",
+          href: "https://summerofcode.withgoogle.com/archive/2025/projects/txbphR3y",
+          icon: <FaGoogle className="size-3" />,
+        },
+        {
+          type: "Resonate App",
+          href: "https://play.google.com/store/apps/details?id=com.resonate.resonate&hl=en",
+          icon: <FaGooglePlay className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AOSSIE-Org/Resonate",
+          icon: <Icons.github className="size-3" />,
+        },
+      ]
     },
     {
       company: "TechGropse",
-      href: "https://www.techgropse.com/",
       badges: [],
       location: "Hybrid (Noida, India)",
-      title: "Node.js Intern",
+      title: "Backend Engineering Intern",
       logoUrl: "/techgropse.png",
       start: "August 2023",
       end: "February 2024",
-      description:
-        [
-          "**Developed scalable backends**: Built secure, production-ready APIs using Node.js and MongoDB for multiple client applications serving 10,000+ concurrent users with 99.8% uptime",
-          "**Implemented CI/CD pipelines**: Established automated deployment workflows reducing deployment time by 70% and ensuring zero-downtime releases",
-          "**Collaborated in enterprise environment**: Worked with 5+ cross-functional teams and 15+ developers on large codebases, learning Git workflows and code review processes"
-        ]
+      description: [
+        "- Built secure and scalable *Node.js* and *MongoDB* backend systems for multiple production applications supporting *10,000+ concurrent users* with *99.8% uptime*.",
+        "- Designed and integrated production-ready *REST APIs*, authentication workflows, and database architectures for *high-traffic client applications* across diverse business domains.",
+        "- Implemented automated *CI/CD pipelines* and deployment workflows, reducing release turnaround time by 70% while enabling reliable zero-downtime deployments.",
+        "- Collaborated across *5+ cross-functional teams* and large shared codebases using enterprise Git workflows, peer reviews, agile development practices, and iterative release cycles.",
+        "- Gained hands-on experience working within production engineering environments involving *scalable backend architecture*, *deployment automation*, *debugging*, and *performance optimization*."
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://techgropse.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ]
     },
 
   ],
   education: [
     {
       school: "Bennett University",
-      degree: "Bachelor's of Technology in Computer Science Engineering | 8.42 CGPA",
+      degree: "Bachelor's of Technology in Computer Science Engineering | 8.55 CGPA",
       logoUrl: "/bennett-univ.png",
       start: "2022",
       end: "2026",
@@ -358,11 +406,11 @@ simple strongly typed APIs.`,
         "ESP SmartConfig",
       ],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/M4dhav/water-saver",
-          icon: <Icons.github className="size-3" />,
-        },
+        // {
+        //   type: "Source",
+        //   href: "https://github.com/M4dhav/water-saver",
+        //   icon: <Icons.github className="size-3" />,
+        // },
       ],
       image: "",
       video:
@@ -372,21 +420,52 @@ simple strongly typed APIs.`,
   hackathons: [],
   positionsOfResponsibility: [
     {
+      organization: "AOSSIE",
+      position: "Google Summer of Code Organization Administrator and Project Mentor",
+      logoUrl: "/aossie.png",
+      start: "November 2025",
+      end: "Present",
+      description: [
+        "- Promoted to serve as a *Google Summer of Code Organization Administrator*, overseeing contributor onboarding, mentor coordination, project evaluations, and program execution across multiple open-source initiatives.",
+        "- Mentoring *6 student contributors* across diverse projects and technology stacks, providing guidance on software architecture, development workflows, debugging, code reviews, and open-source collaboration practices.",
+        "- Coordinated communication and collaboration between global contributors, maintainers, and mentors within distributed engineering teams to ensure successful project delivery and contributor growth.",
+        "- Assisted in streamlining contributor workflows, documentation standards, and evaluation processes to improve onboarding efficiency and community engagement.",
+        "- Fostered a collaborative open-source culture by supporting contributors throughout the development lifecycle, from ideation and planning to implementation and deployment.",
+        "---",
+        "*Project Mentor and Open Source Contributor*",
+        "- Contributed to multiple open-source initiatives under **AOSSIE**, collaborating with international contributors and maintainers on scalable production-grade systems and developer tooling.",
+        "- Conducted technical mentorship sessions and architectural reviews while helping contributors navigate large codebases, issue tracking systems, and collaborative development environments.",
+        "- Helped strengthen community participation and contributor retention by promoting knowledge sharing, peer collaboration, and open-source best practices."
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://aossie.org/",
+          icon: <FaGlobe className="size-3" />,
+        },
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/company/aossie/",
+          icon: <FaLinkedin className="size-3" />,
+        },
+      ]
+    },
+    {
       organization: "FOSS United Chapter Bennett University",
       position: "Founder and Senior Mentor",
       logoUrl: "/foss.jpg",
       start: "September 2024",
-      end: "Present",
+      end: "May 2026",
       description: [
-        "- Co-founded and currently serve as a Senior Mentor, guiding the core team for the 2025-26 tenure.",
-        "- Selected and empowered club leads to drive impactful open-source initiatives within the student community.",
-        "- Fostered collaboration and innovation, enhancing student engagement and participation in tech projects.",
-        "- Developed leadership and mentorship skills while promoting a culture of open-source contributions.",
+        "- *Mentored the core team for the 2025-26 tenure*, empowering student leads to organize technical initiatives, workshops, hackathons, and community-driven development programs.",
         "---",
-        "Founder and Co-Lead",
-        "- Spearheaded the establishment of the FOSS Community at Bennett University, organizing impactful events to enhance the coding culture.",
-        "- Collaborated with team members to develop innovative strategies for community engagement and growth.",
-        "- Implemented initiatives to promote open-source software development and foster a collaborative learning environment.",
+        "*Co-Lead*",
+        "- Co-founded the *FOSS United Bennett University Chapter* and *led the Core Team for the 2024-25 tenure*, helping to scale it into an active open-source community focused on engineering collaboration, developer growth, and hands-on learning.",
+        "- Fostered a strong culture of *open-source contribution and peer mentorship* by guiding students across Git workflows, collaborative development practices, project architecture, and community engagement.",
+        "- Organized and supported technical events focused on modern development ecosystems including *open-source tooling, DevOps, AI, Linux, and full-stack engineering workflows.*",
+        "- Collaborated with contributors, organizers, and external communities to improve participation in open-source programs, hackathons, and real-world engineering projects.",
+        "- Designed community engagement strategies and collaborative programs that increased student participation in open-source software development and engineering-focused learning environments.",
+        "- Worked closely with organizers and contributors to cultivate a sustainable ecosystem centered around knowledge sharing, innovation, and real-world product building."
       ],
       links: [
         {
@@ -401,16 +480,17 @@ simple strongly typed APIs.`,
       position: "Senior Mentor",
       logoUrl: "/ais.jpg",
       start: "August 2024",
-      end: "Present",
+      end: "May 2026",
       description: [
-        "- Mentored the AIS Core for the academic year 2025-26, providing guidance on technical and operational challenges.",
-        "- Facilitated workshops and training sessions to enhance team skills and knowledge in artificial intelligence.",
-        "- Collaborated with diverse teams to foster a culture of innovation and continuous improvement within the society.",
+        "- *Mentored the AIS core team for the 2025-26 tenure*, providing technical guidance across AI/ML systems, project architecture, research workflows, and operational planning.",
+        "- Collaborated with multidisciplinary student teams to foster a culture of innovation, experimentation, and research-driven product development within the society.",
+        "- Supported contributors in building real-world AI projects by assisting with *model development, experimentation pipelines, deployment strategies, and engineering best practices.*",
         "---",
-        "Reinforcement Team Lead",
-        "- Mentor Juniors in ML Projects",
-        "- Develop Cutting Edge Reinforcement Learning Projects",
-        "- Research in the Reinforcement Learning field"
+        "*Reinforcement Learning Team Lead*",
+        "- *Led the Reinforcement Learning division* by mentoring junior contributors on research methodologies, experimentation workflows, and scalable ML project development.",
+        "- Conducted workshops, technical sessions, and mentorship programs focused on *modern AI engineering practices including machine learning, deep learning, reinforcement learning, and applied AI systems.*",
+        "- Worked on *cutting-edge reinforcement learning systems* involving intelligent agents, decision-making models, simulation environments, and autonomous learning architectures.",
+        "- Conducted research and exploratory development in the field of *Reinforcement Learning*, focusing on practical AI applications and emerging methodologies."
       ],
       links: [
         {
@@ -426,7 +506,14 @@ simple strongly typed APIs.`,
       logoUrl: "/mobilon.jpg",
       start: "September 2023",
       end: "July 2024",
-      description: "As Technical Co-Head, led the development initiatives of the club, spearheading the development of multiple functional apps, including a Ride-Share Platform, a Locator service, and an AI Companion. Learnt and taught Juniors how to work with big teams, and use of services like GitHub and Firebase. Guided the juniors on their journey to learning Mobile Development with Flutter. Co-Hosted multiple events throughout the year, including a 5 Day Fullstack Workshop which included sessions on AI/ML, Backend Development and Mobile Development, and acted as Speaker for the session on Mobile Development. Also organised an RTC to facilitate sharing of Entrepreneurial ideas and helped develop the best ideas into real world applications.",
+      description: [
+        "- Led technical initiatives for the club by overseeing the development of multiple production-oriented applications including a *ride-sharing platform, location services platform, and AI-powered companion system*.",
+        "- Mentored junior developers on *Flutter, Firebase, GitHub workflows, collaborative development practices, and scalable application architecture* within large team environments.",
+        "- Coordinated engineering efforts across multiple student-led projects, helping contributors transition ideas from prototypes into deployable real-world applications.",
+        "- Co-hosted and organized technical events, workshops, and community sessions focused on *full-stack engineering, AI/ML systems, backend development, and cross-platform application development*.",
+        "- Delivered technical sessions as a speaker during a *5-day Full Stack Development Workshop*, conducting hands-on sessions focused on mobile application engineering and modern development workflows.",
+        "- Organized and facilitated an RTC (Round Table Conference) focused on startup ideation and product innovation, helping teams refine concepts and transform them into executable technical solutions."
+      ],
       links: [
         {
           type: "LinkedIn",
