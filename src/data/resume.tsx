@@ -158,8 +158,9 @@ export const DATA = {
       logoUrl: "/pcg-t.png",
       logoBackground: "black",
       start: "February 2024",
-      end: "Present",
+      end: "July 2026",
       description: [
+        "- Left PCG in July '26 to follow my dreams :)",
         "- Contributed as a core engineer to Orcha, an *AI-native product management platform* built with React, TSX, Rust, and multi-agent AI systems, enabling *autonomous agents* to execute workflows including software development, market research, media generation, meeting transcription, and intelligent task orchestration within collaborative Kanban environments.",
         "- *Promoted to Senior Engineer* in Jan 2026 after a large period of impactful contributions across the product stack, demonstrating leadership in scalable architecture design, cross-functional collaboration, and mentorship within a fast-paced startup environment.",
         "---",
@@ -192,8 +193,9 @@ export const DATA = {
       title: "Consultant Product Engineer",
       logoUrl: "/osts.png",
       start: "January 2024",
-      end: "Present",
+      end: "July 2026",
       description: [
+        "- Left OSTS in July '26 as well.",
         "- Built an end-to-end *IoT water tank management platform* integrating embedded devices, cloud infrastructure, and cross-platform applications for *real-time monitoring, automation, and operational analytics*, reducing manual monitoring costs by 60%.",
         "- Developed production-grade firmware using ESP-IDF and C++ for scalable IoT hardware deployments, enabling reliable device communication, telemetry collection, and low-cost infrastructure expansion.",
         "- Engineered a cross-platform client application using *Flutter*, *Firebase*, and *AWS S3* with 99% uptime, enabling real-time device management, analytics visualization, onboarding workflows, and remote operational support.",
